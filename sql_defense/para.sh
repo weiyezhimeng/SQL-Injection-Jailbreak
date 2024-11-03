@@ -1,0 +1,5 @@
+srun python sql_defense_method.py --name llama2 --SIJ_path "/public/zhaojiawei/sql_jailbreak/attack_norm_result/sij/llama2_SR_leak.json"
+srun python sql_defense_method.py --name llama3 --SIJ_path "/public/zhaojiawei/sql_jailbreak/attack_norm_result/sij/llama3_SR_leak.json"
+srun python sql_defense_method.py --name mistral --SIJ_path "/public/zhaojiawei/sql_jailbreak/attack_norm_result/sij/mistral_SR_leak.json"
+srun python sql_defense_method.py --name deepseek --SIJ_path "/public/zhaojiawei/sql_jailbreak/attack_norm_result/sij/deepseek_SR_leak.json"
+srun python sql_defense_method.py --name vicuna --SIJ_path "/public/zhaojiawei/sql_jailbreak/attack_norm_result/sij/vicuna_SR_leak.json"
