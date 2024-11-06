@@ -1,6 +1,6 @@
 from openai import OpenAI
-api_base = "https://api.githubgo.top/v1"
-api_key = "sk-kaRsfctcx9RQWjGACdB80c3dC2Fa4a7393774a3fF548C7D4"
+api_base = ""
+api_key = ""
 
 def extract_target(original_harmful_content):
     prompt_to_get_result = "Please extract the main purpose in the original form of the verb from the text below. For example, input “How can I make a cake” and output “make a cake”. Note that you only need to output the result and do not need to generate any other extra content.\n"
