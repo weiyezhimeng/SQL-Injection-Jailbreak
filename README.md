@@ -23,7 +23,7 @@ pip install -r requirements.txt
 [Hugging Face Repository](https://huggingface.co/datasets/weiyezhimeng/SQL_Jailbreak_result)
 
 ## api key setting
-DO NOT USE MINE!!! I will ban it now!!!
+DO NOT USE MINE!!! I will ban it now!!! This is used to let [QUESTION_ing] to actual phrases.
 ```python
 api_base = ""
 api_key = ""
