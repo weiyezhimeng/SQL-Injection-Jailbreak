@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 [Hugging Face Repository](https://huggingface.co/datasets/weiyezhimeng/SQL_Jailbreak_result)
 
-## api key seteing
+## api key setting
 DO NOT USE MINE!!! I will ban it now!!!
 ```python
 api_base = ""
