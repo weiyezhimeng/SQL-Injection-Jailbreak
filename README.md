@@ -22,6 +22,14 @@ pip install -r requirements.txt
 
 [Hugging Face Repository](https://huggingface.co/datasets/weiyezhimeng/SQL_Jailbreak_result)
 
+## api key seteing
+DO NOT USE MINE!!! I will ban it now!!!
+```python
+api_base = ""
+api_key = ""
+in extract_target.py
+```
+
 ## SIJ Jailbreak
 ```bash
 python sql_jailbreak_main.py --model_path <your model path> --label_id 1
