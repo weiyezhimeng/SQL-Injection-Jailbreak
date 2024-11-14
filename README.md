@@ -23,11 +23,10 @@ pip install -r requirements.txt
 [Hugging Face Repository](https://huggingface.co/datasets/weiyezhimeng/SQL_Jailbreak_result)
 
 ## api key setting
-DO NOT USE MINE!!! I will ban it now!!! This is used to let [QUESTION_ing] to actual phrases.
+In ```extract_target.py```. This is used to let ```[QUESTION_ing]```, ```[QUESTION]```, ```[QUESTION_noun]``` to actual phrases, I will add it in argparse later.
 ```python
 api_base = ""
 api_key = ""
-in extract_target.py
 ```
 
 ## SIJ Jailbreak
