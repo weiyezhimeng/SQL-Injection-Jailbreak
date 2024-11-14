@@ -1,3 +1,4 @@
 secrets
 torch
 transformers
+openai
