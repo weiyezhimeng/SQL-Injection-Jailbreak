@@ -1,7 +1,7 @@
 import sys
 import json
 sys.path.append('..')
-import utils.model_safe as model_utils
+import utils_eva_harmful_score as model_utils
 import tqdm
 import multiprocessing as mp
 import logging
