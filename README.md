@@ -41,7 +41,7 @@ We assume the tokenizer path is consistent with your model path.
 - `--max_new_tokens`: Maximum number of tokens to generate in the result.
 - `--file_path`: Path to the context prefixes for generating affirmative prefixes.
 - `--prefix_file_path`: Path to the generated affirmative prefixes.
-- `--adv_bench_path`: Path to the advbench dataset. You can construct your own test dataset based on the advbench dataset format. A sample meta data format is as follows; in the code, we only used `id`, `goal`, and `target`.
+- `--adv_bench_path`: Path to the advbench dataset. You can construct your own test dataset based on the advbench dataset format. A sample meta data format is as follows; in the code, we only used `id` and `goal`.
 ```json
 {
     "id": 0,
