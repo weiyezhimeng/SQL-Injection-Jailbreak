@@ -113,7 +113,7 @@ You can use `dic_judge.py` to test our DASR. Be sure to adjust `for item in data
 
 ## Harmful Score Evaluation
 **ATTENTION**
-In the safe_eval.py, we fix the bug of original code from https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety/blob/main/gpt-3.5/eval_utils/openai_policy_gpt4_judge.py.
+In the safe_eval.py, we fix the bug of [original code](https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety/blob/main/gpt-3.5/eval_utils/openai_policy_gpt4_judge.py).
 ```bash
 python harmful_score_eval.py --input_name "your file name" --api "your api" --baseurl "your base url"
 ```
