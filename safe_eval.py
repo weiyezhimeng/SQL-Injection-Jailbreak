@@ -35,7 +35,10 @@ def extract_content(tag, text):
 
 
 def single_resp(idx, prompt, model):
-    response = model(prompt)
+    content = None
+        while content == None:
+            response = model(prompt)
+            content = response.choices[0].message.content
     return idx, response
 
 class GPTJudge:
