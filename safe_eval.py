@@ -24,10 +24,10 @@ def extract_content(tag, text):
     
     # If the first part (immediately after the tag) is a number, return it, else return the entire content after the tag
     if tag == "#thescore:":
-        if not parts[0].isdigit():
+        if not parts[0][0].isdigit():
             return 1 # default score
         else:
-            return int(parts[0])
+            return int(parts[0][0])
     else:
         end_idx = text.find("#", start_idx + 1)
         return content_after_tag if end_idx == -1 else content_after_tag[:end_idx].strip()
