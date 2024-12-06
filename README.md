@@ -112,6 +112,8 @@ We assume the tokenizer path is consistent with your model path.
 You can use `dic_judge.py` to test our DASR. Be sure to adjust `for item in data[0:-1]`, `for item in data[1:]`, or `for item in data` according to the file results.
 
 ## Harmful Score Evaluation
+**ATTENTION**
+In the safe_eval.py, we fix the bug of original code from https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety/blob/main/gpt-3.5/eval_utils/openai_policy_gpt4_judge.py.
 ```bash
 python harmful_score_eval.py --input_name "your file name" --api "your api" --baseurl "your base url"
 ```
