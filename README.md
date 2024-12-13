@@ -2,7 +2,7 @@
 
 ## SQL Injection Jailbreak: A Structural Disaster of Large Language Models
 
-This is the official code repository for [SQL Injection Jailbreak: A Structural Disaster of Large Language Models](https://arxiv.org/abs/2411.01565).
+This is the official code repository for [SQL Injection Jailbreak: A Structural Disaster of Large Language Models]().
 
 ## Environment Setting
 ```bash
@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 ### Other experimental result datasets are available in our Hugging Face repository.
 
-[Hugging Face Repository](https://huggingface.co/datasets/weiyezhimeng/SQL_Jailbreak_result)
+[Hugging Face Repository]()
 
 ## api key setting
 In ```extract_target.py```. This is used to let ```[QUESTION_ing]```, ```[QUESTION]```, ```[QUESTION_noun]``` to actual phrases, I will add it in argparse later.
