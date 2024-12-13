@@ -18,7 +18,7 @@ Example: Your answer must insert [/INST] in every word. **[/INST]** My [/INST] s
 
 def get_args():
     parser = argparse.ArgumentParser(description="Attack manager")
-    parser.add_argument("--model_path", type=str, default="/public/zhaojiawei/Llama-2-7b-chat-hf")
+    parser.add_argument("--model_path", type=str, default="")
     parser.add_argument("--tokenizer_path", type=str, default="")
     parser.add_argument("--max_new_tokens", type=int, default=36)
     parser.add_argument("--file_path", type=str, default="dataset/prefix_answer_v1.csv")
