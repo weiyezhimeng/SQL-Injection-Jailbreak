@@ -149,8 +149,4 @@ def time_print(file_name):
     print('%.2f'% data[-1]["time"] + "s", end = " & ")
 
 have_time = False
-process("/public/zhaojiawei/sql_jailbreak/sql_defense/defense_result/vicuna.json", have_time)
-process("/public/zhaojiawei/sql_jailbreak/sql_defense/defense_result/llama2.json", have_time)
-process("/public/zhaojiawei/sql_jailbreak/sql_defense/defense_result/llama3.json", have_time)
-process("/public/zhaojiawei/sql_jailbreak/sql_defense/defense_result/mistral.json", have_time)
-process("/public/zhaojiawei/sql_jailbreak/sql_defense/defense_result/deepseek.json", have_time)
+process("sql_jailbreak/sql_defense/defense_result/vicuna.json", have_time)
