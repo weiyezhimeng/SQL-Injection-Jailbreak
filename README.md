@@ -77,7 +77,7 @@ An example is as follows:
 ```json
 [
     {
-        "model_path": "/public/zhaojiawei/Llama-2-7b-chat-hf",
+        "model_path": "Llama-2-7b-chat-hf",
         "max_new_tokens": 36,
         "label": "\n1."
     },
