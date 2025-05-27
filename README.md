@@ -2,7 +2,7 @@
 
 ## SQL Injection Jailbreak: A Structural Disaster of Large Language Models
 
-This is the official code repository for [[Findings of ACL 2025]SQL Injection Jailbreak: A Structural Disaster of Large Language Models](https://arxiv.org/abs/2411.01565).
+This is the official code repository for [[Findings of ACL 2025] SQL Injection Jailbreak: A Structural Disaster of Large Language Models](https://arxiv.org/abs/2411.01565).
 
 ## Environment Setting
 ```bash
