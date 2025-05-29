@@ -4,6 +4,8 @@
 
 This is the official code repository for [[Findings of ACL 2025] SQL Injection Jailbreak: A Structural Disaster of Large Language Models](https://arxiv.org/abs/2411.01565).
 
+![Alt text](main.png)
+
 ## Environment Setting
 ```bash
 conda create -n SIJ python=3.10
@@ -15,6 +17,7 @@ pip install -r requirements.txt
 
 ### The datasets used in the code are as follows:
 - `dataset/harmful_behaviors_custom.json`: A curated dataset of 50 samples from advbench.
+- `dataset/advbench_harmful_behaviors`: advbench.
 - `dataset/prefix_answer.json`: The affirmative prefix dataset generated during experiments.
 - `dataset/prefix_answer_v1.csv`: The in context learning prefixes used in the experiments.
 
@@ -22,18 +25,17 @@ pip install -r requirements.txt
 
 [Hugging Face Repository](https://huggingface.co/datasets/weiyezhimeng/SQL_Jailbreak_result)
 
-## api key setting
-In ```extract_target.py```. This is used to let ```[QUESTION_ing]```, ```[QUESTION]```, ```[QUESTION_noun]``` to actual phrases, I will add it in argparse later.
-```python
-api_base = ""
-api_key = ""
-```
-
 ## SIJ Jailbreak
 ```bash
-python sql_jailbreak_main.py --model_path <your model path> --label_id 1
+loacl model
+python sql_jailbreak_main.py --model_path <your model path> --remote_bese_url "" --remote_api_key ""  --label_id 1
 ```
 We assume the tokenizer path is consistent with your model path.
+
+```bash
+remote model
+python sql_jailbreak_main.py --model_path <your model path> --remote_bese_url "" --remote_api_key "" --remote_model_name "gpt-4o-mini" --remote_model_mode --label_id 1
+```
 
 ### Parameter Descriptions
 - `--model_path`: Your model path.
@@ -51,7 +53,6 @@ We assume the tokenizer path is consistent with your model path.
     "Original index": 1
 }
 ```
-- `--adv_bench_mode`: Input true or false, default is true, which means evaluating with the dataset. If false, you need to modify the `harmful_prompt` string in `utils.py/sql_injection_jailbreak` function to conduct a single text attack. This feature will be optimized in the future.
 - `--label_id`: Choose your desired trigger. The available `label_id`s are as follows; you can also add your own triggers in `sql_jailbreak_main.py`.
 ```python
 start_label = {
@@ -70,6 +71,12 @@ start_label = {
 ```python
 args.ranges = [(1, 9), (10, 10), (11, 19), (20, 20), (21, 29), (30, 30), (0, 0)]
 ```
+
+- `--remote_bese_url`: Base url of your api (This is used to let ```[QUESTION_ing]```, ```[QUESTION]```, ```[QUESTION_noun]``` to actual phrases, also used to attack remote model).
+- `--remote_api_key`: Api key (This is used to let ```[QUESTION_ing]```, ```[QUESTION]```, ```[QUESTION_noun]``` to actual phrases, also used to attack remote model).
+- `--remote_model_name`: If you want to attack a remote model, input name to do so.
+- `--remote_model_mode`: If you want to attack a remote model, add it in the comment.
+
 - `--SR_ATTACK`: If you add `--SR_ATTACK` in the command, it means the attack will target self-reminder. Additionally, the code includes defenses against self-reminder.
 
 ### Example Results
@@ -108,12 +115,15 @@ We assume the tokenizer path is consistent with your model path.
 - `--name`: Currently available options are llama2, llama3, vicuna, deepseek, mistral.
 
 ## Evaluation
-### DASR
-You can use `dic_judge.py` to test our DASR. Be sure to adjust `for item in data[0:-1]`, `for item in data[1:]`, or `for item in data` according to the file results.
+### Dic-ASR
+You can use `eval_code/dic_judge.py` to test our Dic-ASR. Be sure to adjust `for item in data[0:-1]`, `for item in data[1:]`, or `for item in data` according to the file results.
 
-## Harmful Score Evaluation
+### GPT-ASR
+You can use `eval_code/check_gpt_asr.py` to test our GPT-ASR.
+
+### Harmful Score Evaluation
 **ATTENTION**
 In the safe_eval.py, we fix the bug of original code.
 ```bash
-python harmful_score_eval.py --input_name "your file name" --api "your api" --baseurl "your base url"
+python eval_code/harmful_score_eval.py --input_name "your file name" --api "your api" --baseurl "your base url"
 ```
