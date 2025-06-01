@@ -129,4 +129,4 @@ python eval_code/harmful_score_eval.py --input_name "your file name" --api "your
 ```
 
 ## Issuses
-We add an other `question directory` to address question. See README.md in it.
+We add an `other question directory` to address question. See README.md in it.
