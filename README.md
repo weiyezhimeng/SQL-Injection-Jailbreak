@@ -127,3 +127,6 @@ In the safe_eval.py, we fix the bug of original code.
 ```bash
 python eval_code/harmful_score_eval.py --input_name "your file name" --api "your api" --baseurl "your base url"
 ```
+
+## Issuses
+We add an other `question directory` to address question. See README.md in it.
