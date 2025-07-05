@@ -130,3 +130,13 @@ python eval_code/harmful_score_eval.py --input_name "your file name" --api "your
 
 ## Issuses
 We add an `other question directory` to address question. See README.md in it.
+
+## Citation
+```
+@article{zhao2024sql,
+  title={SQL Injection Jailbreak: A Structural Disaster of Large Language Models},
+  author={Zhao, Jiawei and Chen, Kejiang and Zhang, Weiming and Yu, Nenghai},
+  journal={arXiv preprint arXiv:2411.01565},
+  year={2024}
+}
+```
