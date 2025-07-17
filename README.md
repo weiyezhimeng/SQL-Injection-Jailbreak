@@ -34,7 +34,7 @@ We assume the tokenizer path is consistent with your model path.
 
 ```bash
 remote model
-python sql_jailbreak_main.py --model_path <your model path> --remote_bese_url "" --remote_api_key "" --remote_model_name "gpt-4o-mini" --remote_model_mode --label_id 1
+python sql_jailbreak_main.py --remote_model_name <your model name> --remote_bese_url "" --remote_api_key "" --remote_model_name "gpt-4o-mini" --remote_model_mode --label_id 1
 ```
 
 ### Parameter Descriptions
