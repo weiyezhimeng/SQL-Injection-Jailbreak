@@ -26,15 +26,30 @@ pip install -r requirements.txt
 [Hugging Face Repository](https://huggingface.co/datasets/weiyezhimeng/SQL_Jailbreak_result)
 
 ## SIJ Jailbreak
+### API Setting
+Before you start, you need to set the API key for extracting text intent in the `extract_target.py` file:
+```python
+from openai import OpenAI
+api_base = ""
+api_key = ""
+```
+
+### Model SQL Key Setting
+In addition, if you want to attack a new model, set the corresponding SQL key in `prompt_manger.py`. For example:
+```python
+if self.model_path.endswith("Llama-2-7b-chat-hf"):
+    self.sql_key = "[/INST]"
+```
+
+### Start Jailbreaking
 ```bash
-loacl model
+loacl model: We assume the tokenizer path is consistent with your model path.
 python sql_jailbreak_main.py --model_path <your model path> --remote_bese_url "" --remote_api_key ""  --label_id 1
 ```
-We assume the tokenizer path is consistent with your model path.
 
 ```bash
 remote model
-python sql_jailbreak_main.py --remote_model_name <your model name> --remote_bese_url "" --remote_api_key "" --remote_model_name "gpt-4o-mini" --remote_model_mode --label_id 1
+python sql_jailbreak_main.py --remote_bese_url "" --remote_api_key "" --remote_model_name "gpt-4o-mini" --remote_model_mode --label_id 1
 ```
 
 ### Parameter Descriptions
