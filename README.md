@@ -87,8 +87,8 @@ start_label = {
 args.ranges = [(1, 9), (10, 10), (11, 19), (20, 20), (21, 29), (30, 30), (0, 0)]
 ```
 
-- `--remote_bese_url`: Base url of your api (This is used to let ```[QUESTION_ing]```, ```[QUESTION]```, ```[QUESTION_noun]``` to actual phrases, also used to attack remote model).
-- `--remote_api_key`: Api key (This is used to let ```[QUESTION_ing]```, ```[QUESTION]```, ```[QUESTION_noun]``` to actual phrases, also used to attack remote model).
+- `--remote_bese_url`: Base url of your api (This is used to attack remote model).
+- `--remote_api_key`: Api key (This is used to attack remote model).
 - `--remote_model_name`: If you want to attack a remote model, input name to do so.
 - `--remote_model_mode`: If you want to attack a remote model, add it in the comment.
 
