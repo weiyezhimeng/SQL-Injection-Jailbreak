@@ -44,7 +44,7 @@ if self.model_path.endswith("Llama-2-7b-chat-hf"):
 ### Start Jailbreaking
 ```bash
 loacl model: We assume the tokenizer path is consistent with your model path.
-python sql_jailbreak_main.py --model_path <your model path> --remote_bese_url "" --remote_api_key ""  --label_id 1
+python sql_jailbreak_main.py --model_path <your model path> --label_id 1
 ```
 
 ```bash
