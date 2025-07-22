@@ -147,6 +147,7 @@ python eval_code/harmful_score_eval.py --input_name "your file name" --api "your
 We add an `other question directory` to address question. See README.md in it.
 
 ## Citation
+If you find this useful in your research, please consider citing:
 ```
 @article{zhao2024sql,
   title={SQL Injection Jailbreak: A Structural Disaster of Large Language Models},
