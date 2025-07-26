@@ -155,4 +155,24 @@ If you find this useful in your research, please consider citing:
   journal={arXiv preprint arXiv:2411.01565},
   year={2024}
 }
+@inproceedings{zhao-etal-2025-sql,
+    title = "{SQL} Injection Jailbreak: A Structural Disaster of Large Language Models",
+    author = "Zhao, Jiawei  and
+      Chen, Kejiang  and
+      Zhang, Weiming  and
+      Yu, Nenghai",
+    editor = "Che, Wanxiang  and
+      Nabende, Joyce  and
+      Shutova, Ekaterina  and
+      Pilehvar, Mohammad Taher",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2025",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.findings-acl.358/",
+    pages = "6871--6891",
+    ISBN = "979-8-89176-256-5",
+    abstract = "Large Language Models (LLMs) are susceptible to jailbreak attacks that can induce them to generate harmful content.Previous jailbreak methods primarily exploited the internal properties or capabilities of LLMs, such as optimization-based jailbreak methods and methods that leveraged the model{'}s context-learning abilities. In this paper, we introduce a novel jailbreak method, SQL Injection Jailbreak (SIJ), which targets the external properties of LLMs, specifically, the way LLMs construct input prompts. By injecting jailbreak information into user prompts, SIJ successfully induces the model to output harmful content. For open-source models, SIJ achieves near 100{\%} attack success rates on five well-known LLMs on the AdvBench and HEx-PHI, while incurring lower time costs compared to previous methods. For closed-source models, SIJ achieves an average attack success rate over 85{\%} across five models in the GPT and Doubao series. Additionally, SIJ exposes a new vulnerability in LLMs that urgently requires mitigation. To address this, we propose a simple adaptive defense method called Self-Reminder-Key to counter SIJ and demonstrate its effectiveness through experimental results. Our code is available at https://github.com/weiyezhimeng/SQL-Injection-Jailbreak."
+}
 ```
