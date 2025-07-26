@@ -155,6 +155,8 @@ If you find this useful in your research, please consider citing:
   journal={arXiv preprint arXiv:2411.01565},
   year={2024}
 }
+```
+```
 @inproceedings{zhao-etal-2025-sql,
     title = "{SQL} Injection Jailbreak: A Structural Disaster of Large Language Models",
     author = "Zhao, Jiawei  and
